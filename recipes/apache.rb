@@ -1,8 +1,13 @@
 package 'Install Apache' do
-  case node[:platform]
-  when 'redhat', 'centos'
-    package_name 'httpd'
-  when 'ubuntu', 'debian'
-    package_name 'apache2'
-  end
+  package_name 'apache2'
+end
+
+
+file '/var/www/html/index.html' do
+  action :delete
+  ignore_failure true
+end
+
+service 'apache' do
+  action :nothing
 end
