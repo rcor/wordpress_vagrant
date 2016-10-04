@@ -8,6 +8,6 @@ file '/var/www/html/index.html' do
   ignore_failure true
 end
 
-service 'apache' do
+service 'apache2' do
   action :nothing
 end
