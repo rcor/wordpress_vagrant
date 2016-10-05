@@ -1,15 +1,10 @@
+
 package 'Install Mysql' do
   package_name 'mysql-server'
   action :install
 end
-execute "create user #{user}"
-  command "CREATE USER IF NOT EXISTS '#{user}'@'localhost' IDENTIFIED BY '#{password}';"
-end
-
-execute "create database #{database}"
-  command "CREATE USER IF NOT EXISTS '#{user}'@'localhost' IDENTIFIED BY '#{password}';"
-end
-
-execute "assing database  #{database} to user #{user}"
-  command "CREATE USER IF NOT EXISTS '#{user}'@'localhost' IDENTIFIED BY '#{password}';"
+execute "create database #{node.default[:mysql][:database]}" do
+  command
+  "mysql --user #{node.default[:mysql][:user]} < "\
+  " CREATE IF NOT EXISTS DATABASE #{node.default[:wordpress][:database]}"
 end
