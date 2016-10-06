@@ -23,4 +23,4 @@ end
 include_recipe 'wordpress::apache'
 include_recipe 'wordpress::php5'
 include_recipe 'wordpress::mysql'
-include_recipe 'wordpress::wordpress'
+include_recipe 'wordpress::phpmyadmin'
