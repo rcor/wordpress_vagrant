@@ -8,7 +8,7 @@
 end
 
 
-file '/var/index.php' do
+file 'var/www/html/index2.php' do
   content '<?php phpinfo(); ?>This is a placeholder for the home page.<>'
   mode '0777'
 end
