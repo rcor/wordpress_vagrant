@@ -21,6 +21,6 @@ package 'unzip' do
   action :install
 end
 include_recipe 'wordpress::apache'
-include_recipe 'wordpress::php7'
+include_recipe 'wordpress::php'
 include_recipe 'wordpress::mysql'
 include_recipe 'wordpress::phpmyadmin'

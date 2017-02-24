@@ -1,5 +1,5 @@
 
-%w(php7 libapache2-mod-php7 php7-mcrypt php7-mysql).each do |package|
+%w(php libapache2-mod-php php-mcrypt php-mysql).each do |package|
   package 'Install #{package}' do
     package_name package
     action :install
