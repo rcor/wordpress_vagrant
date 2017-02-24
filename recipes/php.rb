@@ -10,7 +10,5 @@ end
 
 file '/var/index.php' do
   content '<?php phpinfo(); ?>This is a placeholder for the home page.<>'
-  mode '0755'
-  owner 'web_admin'
-  group 'web_admin'
+  mode '0777'
 end
