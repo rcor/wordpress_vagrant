@@ -3,6 +3,5 @@
   package 'Install #{package}' do
     package_name package
     action :install
-    notifies :restart, 'service[apache2]', :immediately
   end
 end
